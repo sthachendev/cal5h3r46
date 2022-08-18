@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+</head>
+<body>
+    <br>
+    <div class="row m-5">
+        <div class="col">
+            <canvas class="border" id="canvas" width="360px" height="400px"></canvas>
+        </div>
+    </div>
+
+    <script>
+         var c = document.getElementById('canvas');
+
+        var ctx = c.getContext('2d');
+        ctx.beginPath();
+        // x-axis-value, y-axis, size, part, radius 
+        ctx.arc(180,75,50,0,2*Math.PI);
+        ctx.stroke();
+        
+//body
+        ctx.moveTo(180,125);
+        ctx.lineTo(180,260);
+        ctx.stroke();
+
+//hand left
+        ctx.moveTo(180,140);
+        ctx.lineTo(140,200);
+        ctx.stroke();
+
+        ctx.moveTo(180,140);
+        ctx.lineTo(220,200);
+        ctx.stroke();
+//legs
+        ctx.moveTo(180,260);
+        ctx.lineTo(220,330);
+        ctx.stroke();
+
+        ctx.moveTo(180,260);
+        ctx.lineTo(140,330);
+        ctx.stroke();
+    </script>
+</body>
+</html>
